@@ -1,0 +1,35 @@
+﻿<Window x:Class="Task4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="180" Width="530">
+    <StackPanel>
+        <WrapPanel>
+            <Button >Создать</Button>
+            <Button>Изменить</Button>
+            <Button>Удалить</Button>
+            <Button>Сохранить</Button>
+            <Button>Сохранить как</Button>
+            <Button>Открыть</Button>
+            <Button>Выход</Button>
+            <Button>Завершение сеанса</Button>
+        </WrapPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <Button Margin="3">Почта</Button>
+                <Button Margin="3">Календарь</Button>
+                <Button Margin="3">Задачи</Button>
+                <Button Margin="3">Журнал</Button>
+                <Button Margin="3">Почта</Button>
+            </StackPanel>
+            <ListBox Grid.Column="1" Name ="listBox1"></ListBox>
+        </Grid>
+    </StackPanel>
+</Window>
