@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\WinForms WPF\\Volkov_HW_6\\Task4\\Task4.csproj",
+      "projectUniqueName": "D:\\Projects\\WinFormsWPF\\Volkov_HW_6\\Task4\\Task4.csproj",
       "projectName": "Task4",
-      "projectPath": "D:\\Projects\\WinForms WPF\\Volkov_HW_6\\Task4\\Task4.csproj",
+      "projectPath": "D:\\Projects\\WinFormsWPF\\Volkov_HW_6\\Task4\\Task4.csproj",
       "packagesPath": "C:\\Users\\mrwol\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\WinForms WPF\\Volkov_HW_6\\Task4\\obj\\",
+      "outputPath": "D:\\Projects\\WinFormsWPF\\Volkov_HW_6\\Task4\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

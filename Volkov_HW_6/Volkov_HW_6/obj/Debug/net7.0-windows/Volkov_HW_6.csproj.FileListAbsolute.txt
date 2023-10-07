@@ -19,3 +19,24 @@ D:\Projects\WinForms WPF\Volkov_HW_6\Volkov_HW_6\obj\Debug\net7.0-windows\refint
 D:\Projects\WinForms WPF\Volkov_HW_6\Volkov_HW_6\obj\Debug\net7.0-windows\Volkov_HW_6.pdb
 D:\Projects\WinForms WPF\Volkov_HW_6\Volkov_HW_6\obj\Debug\net7.0-windows\Volkov_HW_6.genruntimeconfig.cache
 D:\Projects\WinForms WPF\Volkov_HW_6\Volkov_HW_6\obj\Debug\net7.0-windows\ref\Volkov_HW_6.dll
+D:\Projects\WinFormsWPF\Volkov_HW_6\Volkov_HW_6\bin\Debug\net7.0-windows\Volkov_HW_6.exe
+D:\Projects\WinFormsWPF\Volkov_HW_6\Volkov_HW_6\bin\Debug\net7.0-windows\Volkov_HW_6.deps.json
+D:\Projects\WinFormsWPF\Volkov_HW_6\Volkov_HW_6\bin\Debug\net7.0-windows\Volkov_HW_6.runtimeconfig.json
+D:\Projects\WinFormsWPF\Volkov_HW_6\Volkov_HW_6\bin\Debug\net7.0-windows\Volkov_HW_6.dll
+D:\Projects\WinFormsWPF\Volkov_HW_6\Volkov_HW_6\bin\Debug\net7.0-windows\Volkov_HW_6.pdb
+D:\Projects\WinFormsWPF\Volkov_HW_6\Volkov_HW_6\obj\Debug\net7.0-windows\Volkov_HW_6.csproj.AssemblyReference.cache
+D:\Projects\WinFormsWPF\Volkov_HW_6\Volkov_HW_6\obj\Debug\net7.0-windows\MainWindow.g.cs
+D:\Projects\WinFormsWPF\Volkov_HW_6\Volkov_HW_6\obj\Debug\net7.0-windows\App.g.cs
+D:\Projects\WinFormsWPF\Volkov_HW_6\Volkov_HW_6\obj\Debug\net7.0-windows\Volkov_HW_6_MarkupCompile.cache
+D:\Projects\WinFormsWPF\Volkov_HW_6\Volkov_HW_6\obj\Debug\net7.0-windows\Volkov_HW_6_MarkupCompile.lref
+D:\Projects\WinFormsWPF\Volkov_HW_6\Volkov_HW_6\obj\Debug\net7.0-windows\MainWindow.baml
+D:\Projects\WinFormsWPF\Volkov_HW_6\Volkov_HW_6\obj\Debug\net7.0-windows\Volkov_HW_6.g.resources
+D:\Projects\WinFormsWPF\Volkov_HW_6\Volkov_HW_6\obj\Debug\net7.0-windows\Volkov_HW_6.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\WinFormsWPF\Volkov_HW_6\Volkov_HW_6\obj\Debug\net7.0-windows\Volkov_HW_6.AssemblyInfoInputs.cache
+D:\Projects\WinFormsWPF\Volkov_HW_6\Volkov_HW_6\obj\Debug\net7.0-windows\Volkov_HW_6.AssemblyInfo.cs
+D:\Projects\WinFormsWPF\Volkov_HW_6\Volkov_HW_6\obj\Debug\net7.0-windows\Volkov_HW_6.csproj.CoreCompileInputs.cache
+D:\Projects\WinFormsWPF\Volkov_HW_6\Volkov_HW_6\obj\Debug\net7.0-windows\Volkov_HW_6.dll
+D:\Projects\WinFormsWPF\Volkov_HW_6\Volkov_HW_6\obj\Debug\net7.0-windows\refint\Volkov_HW_6.dll
+D:\Projects\WinFormsWPF\Volkov_HW_6\Volkov_HW_6\obj\Debug\net7.0-windows\Volkov_HW_6.pdb
+D:\Projects\WinFormsWPF\Volkov_HW_6\Volkov_HW_6\obj\Debug\net7.0-windows\Volkov_HW_6.genruntimeconfig.cache
+D:\Projects\WinFormsWPF\Volkov_HW_6\Volkov_HW_6\obj\Debug\net7.0-windows\ref\Volkov_HW_6.dll
