@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Projects\WinFormsWPF\Volkov_HW_6\Task2\obj\Debug\net7.0-windows\
+D:\Projects\WPF\Volkov_HW_6\Task2\obj\Debug\net7.0-windows\
 Task2
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-D:\Projects\WinFormsWPF\Volkov_HW_6\Task2\App.xaml
+D:\Projects\WPF\Volkov_HW_6\Task2\App.xaml
 11407045341
 
 5-1064840275
 1981827736222
 MainWindow.xaml;
 
-True
+False
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\WinFormsWPF\\Volkov_HW_6\\Task4\\Task4.csproj": {}
+    "D:\\Projects\\WPF\\Volkov_HW_6\\Task4\\Task4.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\WinFormsWPF\\Volkov_HW_6\\Task4\\Task4.csproj": {
+    "D:\\Projects\\WPF\\Volkov_HW_6\\Task4\\Task4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\WinFormsWPF\\Volkov_HW_6\\Task4\\Task4.csproj",
+        "projectUniqueName": "D:\\Projects\\WPF\\Volkov_HW_6\\Task4\\Task4.csproj",
         "projectName": "Task4",
-        "projectPath": "D:\\Projects\\WinFormsWPF\\Volkov_HW_6\\Task4\\Task4.csproj",
+        "projectPath": "D:\\Projects\\WPF\\Volkov_HW_6\\Task4\\Task4.csproj",
         "packagesPath": "C:\\Users\\mrwol\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\WinFormsWPF\\Volkov_HW_6\\Task4\\obj\\",
+        "outputPath": "D:\\Projects\\WPF\\Volkov_HW_6\\Task4\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
