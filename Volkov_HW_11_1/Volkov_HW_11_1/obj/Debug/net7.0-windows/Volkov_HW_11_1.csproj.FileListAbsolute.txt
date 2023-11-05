@@ -1,13 +1,13 @@
-D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\bin\Debug\net7.0-windows\Volkov_HW_11_1.exe
-D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\bin\Debug\net7.0-windows\Volkov_HW_11_1.deps.json
-D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\bin\Debug\net7.0-windows\Volkov_HW_11_1.runtimeconfig.json
-D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\bin\Debug\net7.0-windows\Volkov_HW_11_1.dll
-D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\bin\Debug\net7.0-windows\Volkov_HW_11_1.pdb
 D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\obj\Debug\net7.0-windows\MainWindow.g.cs
 D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\obj\Debug\net7.0-windows\App.g.cs
 D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
 D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\obj\Debug\net7.0-windows\Volkov_HW_11_1_MarkupCompile.cache
 D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\obj\Debug\net7.0-windows\Volkov_HW_11_1_MarkupCompile.lref
+D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\bin\Debug\net7.0-windows\Volkov_HW_11_1.exe
+D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\bin\Debug\net7.0-windows\Volkov_HW_11_1.deps.json
+D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\bin\Debug\net7.0-windows\Volkov_HW_11_1.runtimeconfig.json
+D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\bin\Debug\net7.0-windows\Volkov_HW_11_1.dll
+D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\bin\Debug\net7.0-windows\Volkov_HW_11_1.pdb
 D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\obj\Debug\net7.0-windows\MainWindow.baml
 D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\obj\Debug\net7.0-windows\Volkov_HW_11_1.g.resources
 D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\obj\Debug\net7.0-windows\Volkov_HW_11_1.GeneratedMSBuildEditorConfig.editorconfig
@@ -19,3 +19,6 @@ D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\obj\Debug\net7.0-windows\refint\Vo
 D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\obj\Debug\net7.0-windows\Volkov_HW_11_1.pdb
 D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\obj\Debug\net7.0-windows\Volkov_HW_11_1.genruntimeconfig.cache
 D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\obj\Debug\net7.0-windows\ref\Volkov_HW_11_1.dll
+D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
+D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\obj\Debug\net7.0-windows\Volkov_HW_11_1.csproj.AssemblyReference.cache
+D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\obj\Debug\net7.0-windows\Volkov_HW_11_1.csproj.CopyComplete

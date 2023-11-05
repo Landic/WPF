@@ -5,122 +5,39 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Volkov_HW_11_1
 {
-    public class Person : INotifyPropertyChanged
+    public class Person : DependencyObject
     {
-        private string fullname;
-        private string address;
-        private string phone;
+        private static readonly DependencyProperty FullNameProperty;
+        private static readonly DependencyProperty AddressProperty;
+        private static readonly DependencyProperty PhoneProperty;
+
+        static Person()
+        {
+            FullNameProperty = DependencyProperty.Register("FullName", typeof(string), typeof(Person));
+            AddressProperty = DependencyProperty.Register("Address", typeof(string), typeof(Person));
+            PhoneProperty = DependencyProperty.Register("Phone", typeof(string), typeof(Person));
+        }
 
         public string FullName
         {
-            get
-            {
-                return fullname;
-            }
-            set
-            {
-                fullname = value;
-                OnPropertyChanged(new PropertyChangedEventArgs(nameof(FullName)));
-            }
+            get { return (string)GetValue(FullNameProperty); }
+            set { SetValue(FullNameProperty, value); }
         }
+
         public string Address
         {
-            get
-            {
-                return address;
-            }
-            set
-            {
-                address = value;
-                OnPropertyChanged(new PropertyChangedEventArgs(nameof(Address)));
-            }
+            get { return (string)GetValue(AddressProperty); }
+            set { SetValue(AddressProperty, value); }
         }
+
         public string Phone
         {
-            get
-            {
-                return phone;
-            }
-            set
-            {
-                phone = value;
-                OnPropertyChanged(new PropertyChangedEventArgs(nameof(Phone)));
-            }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public void OnPropertyChanged(PropertyChangedEventArgs e)
-        {
-            PropertyChanged?.Invoke(this, e);
-        }
-    }
-
-    public class PersonsInformation : INotifyPropertyChanged
-    {
-        public ObservableCollection<Person> Persons { get; set; } = new ObservableCollection<Person>();
-
-        private int index_selected_listbox = -1;
-
-        public int Index_selected_listbox
-        {
-            get { return index_selected_listbox; }
-            set
-            {
-                index_selected_listbox = value;
-                OnPropertyChanged(new PropertyChangedEventArgs(nameof(Index_selected_listbox)));
-            }
-        }
-
-        private string fullname;
-        private string address;
-        private string phone;
-
-        public string InformationFullName
-        {
-            get
-            {
-                return fullname;
-            }
-            set
-            {
-                fullname = value;
-                OnPropertyChanged(new PropertyChangedEventArgs(nameof(InformationFullName)));
-            }
-        }
-        public string InformationAddress
-        {
-            get
-            {
-                return address;
-            }
-            set
-            {
-                address = value;
-                OnPropertyChanged(new PropertyChangedEventArgs(nameof(InformationAddress)));
-            }
-        }
-        public string InformationPhone
-        {
-            get
-            {
-                return phone;
-            }
-            set
-            {
-                phone = value;
-                OnPropertyChanged(new PropertyChangedEventArgs(nameof(InformationPhone)));
-            }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public void OnPropertyChanged(PropertyChangedEventArgs e)
-        {
-            PropertyChanged?.Invoke(this, e);
+            get { return (string)GetValue(PhoneProperty); }
+            set { SetValue(PhoneProperty, value); }
         }
     }
 }

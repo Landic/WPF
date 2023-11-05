@@ -1,1 +1,72 @@
-[{"FullName":"asdas","Address":"asdasd","Phone":"asdas"},{"FullName":"dfsd","Address":"asdasdasdas","Phone":"weqqw21312"}]
+[
+  {
+    "FullName": "asad",
+    "Address": "asd",
+    "Phone": "sd",
+    "DependencyObjectType": {
+      "Id": 90,
+      "SystemType": "Volkov_HW_11_1.Person, Volkov_HW_11_1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "BaseType": {
+        "Id": 0,
+        "SystemType": "System.Windows.DependencyObject, WindowsBase, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35",
+        "BaseType": null,
+        "Name": "DependencyObject"
+      },
+      "Name": "Person"
+    },
+    "IsSealed": false,
+    "Dispatcher": {
+      "Thread": {
+        "ManagedThreadId": 1,
+        "IsAlive": true,
+        "IsBackground": false,
+        "IsThreadPoolThread": false,
+        "Priority": 2,
+        "ThreadState": 0,
+        "CurrentCulture": "ru-UA",
+        "CurrentUICulture": "ru-RU",
+        "ExecutionContext": {},
+        "Name": null,
+        "ApartmentState": 0
+      },
+      "HasShutdownStarted": false,
+      "HasShutdownFinished": false,
+      "Hooks": {}
+    }
+  },
+  {
+    "FullName": "sd",
+    "Address": "asd",
+    "Phone": "asd",
+    "DependencyObjectType": {
+      "Id": 90,
+      "SystemType": "Volkov_HW_11_1.Person, Volkov_HW_11_1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "BaseType": {
+        "Id": 0,
+        "SystemType": "System.Windows.DependencyObject, WindowsBase, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35",
+        "BaseType": null,
+        "Name": "DependencyObject"
+      },
+      "Name": "Person"
+    },
+    "IsSealed": false,
+    "Dispatcher": {
+      "Thread": {
+        "ManagedThreadId": 1,
+        "IsAlive": true,
+        "IsBackground": false,
+        "IsThreadPoolThread": false,
+        "Priority": 2,
+        "ThreadState": 0,
+        "CurrentCulture": "ru-UA",
+        "CurrentUICulture": "ru-RU",
+        "ExecutionContext": {},
+        "Name": null,
+        "ApartmentState": 0
+      },
+      "HasShutdownStarted": false,
+      "HasShutdownFinished": false,
+      "Hooks": {}
+    }
+  }
+]

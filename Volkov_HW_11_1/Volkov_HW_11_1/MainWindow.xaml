@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" MinHeight="350" MinWidth="600" Height="350" Width="600" Background="DimGray">
     <Window.Resources>
-        <local:PersonsInformation x:Key="person" InformationFullName="" InformationAddress="" InformationPhone=""/>
+        <local:MainWindowViewModel x:Key="person"/>
         <ControlTemplate x:Key="ButtTemplate" TargetType="{x:Type Button}">
             <Border TextBlock.Foreground="White" CornerRadius="5" Background="DarkGray" Name="Border" Margin="5">
                 <Grid>
@@ -50,19 +50,12 @@
             </Border>
         </ControlTemplate>
     </Window.Resources>
-    <Window.CommandBindings>
-        <CommandBinding Command="local:CommandAdd.Add" Executed="AddCommand" CanExecute="AddCommandExecute"/>
-        <CommandBinding Command="local:CommandDel.Del" Executed="DelCommand" CanExecute="DelCommandExecute"/>
-        <CommandBinding Command="local:CommandEdit.Edit" Executed="EditCommand" CanExecute="EditCommandExecute"/>
-        <CommandBinding Command="local:CommandSaveJson.Save" Executed="SaveJsonCommand" CanExecute="SaveJsonCommandExecute"/>
-        <CommandBinding Command="local:CommandLoadJson.Load" Executed="LoadJsonCommand"/>
-    </Window.CommandBindings>
     <Grid DataContext="{StaticResource person}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="0.5*"/>
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="Listbox1" ItemsSource="{Binding Persons}" Template="{StaticResource ListBoxStyle}" SelectedIndex="{Binding Index_selected_listbox, Mode=TwoWay}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListBox_SelectionChanged">
+        <ListBox x:Name="Listbox1" ItemsSource="{Binding Persons}" Template="{StaticResource ListBoxStyle}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectedItem="{Binding SelectedPerson, Mode=TwoWay}">
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch" />
@@ -96,14 +89,14 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <TextBox Text="{Binding InformationFullName}" Template="{StaticResource TextBoxTemplate}"></TextBox>
-            <TextBox Grid.Row="1" Text="{Binding InformationAddress}" Template="{StaticResource TextBoxTemplate}"></TextBox>
-            <TextBox Grid.Row="2" Text="{Binding InformationPhone}" Template="{StaticResource TextBoxTemplate}"></TextBox>
-            <Button Grid.Row="3" Command="local:CommandAdd.Add" Template="{StaticResource ButtTemplate}">Добавить</Button>
-            <Button Grid.Row="4" Command="local:CommandEdit.Edit" Template="{StaticResource ButtTemplate}">Редактировать</Button>
-            <Button Grid.Row="5" Command="local:CommandDel.Del" Template="{StaticResource ButtTemplate}">Удалить</Button>
-            <Button Grid.Row="6" Command="local:CommandSaveJson.Save" Template="{StaticResource ButtTemplate}">Сохранить</Button>
-            <Button Grid.Row="7" Command="local:CommandLoadJson.Load" Template="{StaticResource ButtTemplate}">Загрузить</Button>
+            <TextBox Text="{Binding InformationFullName, UpdateSourceTrigger=PropertyChanged}" Template="{StaticResource TextBoxTemplate}"></TextBox>
+            <TextBox Grid.Row="1" Text="{Binding InformationAddress, UpdateSourceTrigger=PropertyChanged}" Template="{StaticResource TextBoxTemplate}"></TextBox>
+            <TextBox Grid.Row="2" Text="{Binding InformationPhone, UpdateSourceTrigger=PropertyChanged}" Template="{StaticResource TextBoxTemplate}"></TextBox>
+            <Button Grid.Row="3" Command="{Binding AddCommand}" Template="{StaticResource ButtTemplate}">Добавить</Button>
+            <Button Grid.Row="4" Command="{Binding EditCommand}" Template="{StaticResource ButtTemplate}">Редактировать</Button>
+            <Button Grid.Row="5" Command="{Binding DeleteCommand}" Template="{StaticResource ButtTemplate}">Удалить</Button>
+            <Button Grid.Row="6" Command="{Binding SaveJsonCommand}" Template="{StaticResource ButtTemplate}">Сохранить</Button>
+            <Button Grid.Row="7" Command="{Binding LoadJsonCommand}" Template="{StaticResource ButtTemplate}">Загрузить</Button>
         </Grid>
     </Grid>
 </Window>
