@@ -3,7 +3,6 @@ D:\Projects\WPF\Volkov_HW_9\Volkov_HW_9\bin\Debug\net7.0-windows\Volkov_HW_9.dep
 D:\Projects\WPF\Volkov_HW_9\Volkov_HW_9\bin\Debug\net7.0-windows\Volkov_HW_9.runtimeconfig.json
 D:\Projects\WPF\Volkov_HW_9\Volkov_HW_9\bin\Debug\net7.0-windows\Volkov_HW_9.dll
 D:\Projects\WPF\Volkov_HW_9\Volkov_HW_9\bin\Debug\net7.0-windows\Volkov_HW_9.pdb
-D:\Projects\WPF\Volkov_HW_9\Volkov_HW_9\obj\Debug\net7.0-windows\Volkov_HW_9.csproj.AssemblyReference.cache
 D:\Projects\WPF\Volkov_HW_9\Volkov_HW_9\obj\Debug\net7.0-windows\MainWindow.g.cs
 D:\Projects\WPF\Volkov_HW_9\Volkov_HW_9\obj\Debug\net7.0-windows\App.g.cs
 D:\Projects\WPF\Volkov_HW_9\Volkov_HW_9\obj\Debug\net7.0-windows\Volkov_HW_9_MarkupCompile.cache
