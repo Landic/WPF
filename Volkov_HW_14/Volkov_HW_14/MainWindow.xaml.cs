@@ -50,7 +50,7 @@ namespace Volkov_HW_14
             if(index == 0)
             {
                 title.Content = "Борщ";
-                img.Source = new BitmapImage(new Uri("img/Borsh.jpg", UriKind.Relative));
+                img.Source = new BitmapImage(new Uri("Borsh.jpg", UriKind.Relative));
                 AddRecept("Вода – 1,5-2 л.");
                 AddRecept("Свинина или говядина на кости – 400 г");
                 AddRecept("Картофель – 4 шт. (средние)");
@@ -73,7 +73,7 @@ namespace Volkov_HW_14
             else if(index == 1)
             {
                 title.Content = "Макароны по-флотски";
-                img.Source = new BitmapImage(new Uri("Images/spaghetti.jpg", UriKind.Relative));
+                img.Source = new BitmapImage(new Uri("spaghetti.jpg", UriKind.Relative));
                 AddRecept("Макароны (перья с бороздками, спиральки и т.п.) - 225 г");
                 AddRecept("Говядина - 275 г");
                 AddRecept("Лук репчатый - 175 г");
@@ -102,7 +102,7 @@ namespace Volkov_HW_14
             else if(index == 2)
             {
                 title.Content = "Паста \"Карбонара\"";
-                img.Source = new BitmapImage(new Uri("Images/Spaghetti2.jpg", UriKind.Relative));
+                img.Source = new BitmapImage(new Uri("Spaghetti2.jpg", UriKind.Relative));
                 AddRecept("Спагетти - 400 г");
                 AddRecept("Грудинка варено-копчёная - 200 г");
                 AddRecept("Яйцо куриное - 1 шт.");
@@ -127,7 +127,7 @@ namespace Volkov_HW_14
             else if (index == 3)
             {
                 title.Content = "Лазанья";
-                img.Source = new BitmapImage(new Uri("Images/Lazania.jpg", UriKind.Relative));
+                img.Source = new BitmapImage(new Uri("Lazania.jpg", UriKind.Relative));
                 AddRecept("Листы для лазаньи (сухие) - 6 шт.");
                 AddRecept("Фарш мясной (свинина/говядина) - 750 г");
                 AddRecept("Лук репчатый - 1 шт.");
@@ -155,7 +155,7 @@ namespace Volkov_HW_14
             else if (index == 4)
             {
                 title.Content = "Домашние сырные палочки";
-                img.Source = new BitmapImage(new Uri("Images/Chees.jpg", UriKind.Relative));
+                img.Source = new BitmapImage(new Uri("Chees.jpg", UriKind.Relative));
                 AddRecept("Сыр твердый - 300 г");
                 AddRecept("Яйцо - 1 шт.");
                 AddRecept("Мука - 30 г (1 ст. ложка с горкой)");
