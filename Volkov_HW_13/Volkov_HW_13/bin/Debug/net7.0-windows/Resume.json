@@ -1,0 +1,25 @@
+[
+  {
+    "Check1": false,
+    "Check2": false,
+    "Check3": false,
+    "Model": {
+      "Fullname": "asdsad",
+      "Age": "asdasdas",
+      "Family": "asdasdas",
+      "Address": "asdasdasasd",
+      "Email": "asdasdasd",
+      "IsCPlusPlus": "Нет",
+      "IsLanguage": "Нет",
+      "IsOOP": "Нет"
+    },
+    "Fullname": "asdsad",
+    "Age": "asdasdas",
+    "Family": "asdasdas",
+    "Address": "asdasdasasd",
+    "Email": "asdasdasd",
+    "IsCPlusPlus": "Нет",
+    "IsLanguage": "Нет",
+    "IsOOP": "Нет"
+  }
+]

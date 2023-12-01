@@ -60,15 +60,17 @@ namespace Volkov_HW_13
         {
             try
             {
-                if (File.Exists("template.json") && File.Exists("combobox.json"))
+                if (File.Exists("Resume.json") && File.Exists("List.json"))
                 {
-                    string json = File.ReadAllText("template.json");
+                    string json = File.ReadAllText("Resume.json");
                     temp_list = JsonConvert.DeserializeObject<ObservableCollection<PersonViewModel>>(json);
-                    json = File.ReadAllText("combobox.json");
+                    json = File.ReadAllText("List.json");
                     ComboPersons = JsonConvert.DeserializeObject<ObservableCollection<string>>(json);
                 }
             }
-            catch (Exception ex) { MessageBox.Show("Ошибка загрузки из файла: " + ex.Message); }
+            catch (Exception ex) 
+            { MessageBox.Show(ex.Message); 
+            }
         }
         public ICommand AddCommand
         {
@@ -120,8 +122,7 @@ namespace Volkov_HW_13
         }
         private void Remove()
         {
-            MessageBoxResult res = MessageBox.Show("Вы точно хотите удалить резюме?", "?",
-                MessageBoxButton.YesNo, MessageBoxImage.Question);
+            MessageBoxResult res = MessageBox.Show("Вы точно хотите удалить резюме?","Resume", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (res == MessageBoxResult.Yes)
             {
                 ComboPersons.RemoveAt(ComboIndex);
@@ -142,12 +143,14 @@ namespace Volkov_HW_13
             try
             {
                 string json = JsonConvert.SerializeObject(temp_list, Formatting.Indented);
-                File.WriteAllText("template.json", json);
+                File.WriteAllText("Resume.json", json);
                 json = JsonConvert.SerializeObject(ComboPersons, Formatting.Indented);
-                File.WriteAllText("combobox.json", json);
+                File.WriteAllText("List.json", json);
             }
-            catch (Exception ex) { MessageBox.Show("Ошибка сохранения в файл: " + ex.Message); }
-            MessageBox.Show("Пользователи сохранены в файл.");
+            catch (Exception ex) 
+            { 
+                MessageBox.Show(ex.Message); 
+            }
         }
         private bool CanSave() { return temp_list.Count > 0; }
     }
