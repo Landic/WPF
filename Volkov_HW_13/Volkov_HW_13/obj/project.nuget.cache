@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "fTAJSFriHOKsWO0fl8NVyoQ78S8HvMjEJve74/zp9Mg+gemnfrmLuCaK0V0fF3v5tmHNKpuNyJc+rPOJ+wuxXw==",
+  "dgSpecHash": "Q5XlQQhkDM8QzM90dCRUby+zfSLwcON4Tzzt2jy4S5haw38IVkZhVIVqJSWmMSmspLHA49CLrUGTTvnmS18ucQ==",
   "success": true,
   "projectFilePath": "D:\\Projects\\WPF\\Volkov_HW_13\\Volkov_HW_13\\Volkov_HW_13.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\mrwol\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

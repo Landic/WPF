@@ -6,12 +6,27 @@ using System.Threading.Tasks;
 
 namespace Volkov_HW_13
 {
-    public class Resume
+    public class ResumeModel
     {
-        public string Fio, Age, FamilyStatus, Address, Email, IsInfo, IsLanguage, IsCommunicate;
-        public Resume()
+        public string Fullname;
+        public string Age;
+        public string Family;
+        public string Address;
+        public string Email;
+        public string IsCPlusPlus;
+        public string IsLanguage;
+        public string IsOOP;
+
+        public ResumeModel()
         {
-            Fio = Age = FamilyStatus = Address = Email = IsInfo = IsLanguage = IsCommunicate = string.Empty;
+            Fullname = string.Empty;
+            Age = string.Empty;
+            Family = string.Empty;
+            Address = string.Empty;
+            Email = string.Empty;
+            IsCPlusPlus = string.Empty;
+            IsLanguage = string.Empty;
+            IsOOP = string.Empty;
         }
     }
 }

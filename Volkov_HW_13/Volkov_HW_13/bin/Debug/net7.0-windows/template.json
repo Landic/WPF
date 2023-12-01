@@ -1,0 +1,48 @@
+[
+  {
+    "Check1": false,
+    "Check2": false,
+    "Check3": false,
+    "Model": {
+      "Fullname": "asdas",
+      "Age": "asdas",
+      "Family": "asdas",
+      "Address": "asdas",
+      "Email": "asdas",
+      "IsCPlusPlus": "Нет",
+      "IsLanguage": "Нет",
+      "IsOOP": "Нет"
+    },
+    "Fullname": "asdas",
+    "Age": "asdas",
+    "Family": "asdas",
+    "Address": "asdas",
+    "Email": "asdas",
+    "IsCPlusPlus": "Нет",
+    "IsLanguage": "Нет",
+    "IsOOP": "Нет"
+  },
+  {
+    "Check1": false,
+    "Check2": false,
+    "Check3": false,
+    "Model": {
+      "Fullname": "фівфі",
+      "Age": "фівфі",
+      "Family": "фівфі",
+      "Address": "фівфі",
+      "Email": "фівфі",
+      "IsCPlusPlus": "Нет",
+      "IsLanguage": "Нет",
+      "IsOOP": "Нет"
+    },
+    "Fullname": "фівфі",
+    "Age": "фівфі",
+    "Family": "фівфі",
+    "Address": "фівфі",
+    "Email": "фівфі",
+    "IsCPlusPlus": "Нет",
+    "IsLanguage": "Нет",
+    "IsOOP": "Нет"
+  }
+]

@@ -7,11 +7,11 @@ using System.Windows.Input;
 
 namespace Volkov_HW_13
 {
-    public class Command : ICommand
+    public class Commands : ICommand
     {
         Action<object> execute;
         Predicate<object> can_execute;
-        public Command(Action<object> execute, Predicate<object> can_execute)
+        public Commands(Action<object> execute, Predicate<object> can_execute)
         {
             if (execute == null) throw new ArgumentNullException("execute");
             this.execute = execute;

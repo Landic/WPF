@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Collections.Specialized;
 using System.ComponentModel;
-using System.ComponentModel.Design;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
-using System.Xml;
+using Newtonsoft.Json;
 
 namespace Volkov_HW_13
 {
@@ -21,20 +20,20 @@ namespace Volkov_HW_13
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
-    public class ViewModel : BaseViewModel
+    public class MainViewModel : BaseViewModel
     {
         public ObservableCollection<string> ComboPersons { get; set; }
         public ObservableCollection<PersonViewModel> ListPersons { get; set; }
         private ObservableCollection<PersonViewModel> temp_list = new ObservableCollection<PersonViewModel>();
         private PersonViewModel current;
         private int combo_index;
-        private Command? add, select, clear, remove, save;
-        public ViewModel()
+        private Commands? add, select, clear, remove, save;
+        public MainViewModel()
         {
             ComboPersons = new ObservableCollection<string>();
             ListPersons = new ObservableCollection<PersonViewModel>();
             Current = new PersonViewModel();
-            //LoadFromFile();
+            LoadFromFile();
         }
         public PersonViewModel Current
         {
@@ -57,25 +56,25 @@ namespace Volkov_HW_13
                 }
             }
         }
-        //private void LoadFromFile()
-        //{
-        //    try
-        //    {
-        //        if (File.Exists("template.json") && File.Exists("combobox.json"))
-        //        {
-        //            string json = File.ReadAllText("template.json");
-        //            temp_list = JsonConvert.DeserializeObject<ObservableCollection<PersonViewModel>>(json);
-        //            json = File.ReadAllText("combobox.json");
-        //            ComboPersons = JsonConvert.DeserializeObject<ObservableCollection<string>>(json);
-        //        }
-        //    }
-        //    catch (Exception ex) { MessageBox.Show("Ошибка загрузки из файла: " + ex.Message); }
-        //}
+        private void LoadFromFile()
+        {
+            try
+            {
+                if (File.Exists("template.json") && File.Exists("combobox.json"))
+                {
+                    string json = File.ReadAllText("template.json");
+                    temp_list = JsonConvert.DeserializeObject<ObservableCollection<PersonViewModel>>(json);
+                    json = File.ReadAllText("combobox.json");
+                    ComboPersons = JsonConvert.DeserializeObject<ObservableCollection<string>>(json);
+                }
+            }
+            catch (Exception ex) { MessageBox.Show("Ошибка загрузки из файла: " + ex.Message); }
+        }
         public ICommand AddCommand
         {
             get
             {
-                if (add == null) add = new Command(execute => Add(), can => CanAdd());
+                if (add == null) add = new Commands(execute => Add(), can => CanAdd());
                 return add;
             }
         }
@@ -83,7 +82,7 @@ namespace Volkov_HW_13
         {
             ComboPersons.Add(Current.ComboText());
             temp_list.Add(Current.Clone());
-            Current.Fio = Current.Age = Current.FamilyStatus = Current.Address = Current.Email = string.Empty;
+            Current.Fullname = Current.Age = Current.Family = Current.Address = Current.Email = string.Empty;
             Current.Check1 = Current.Check2 = Current.Check3 = false;
         }
         private bool CanAdd() { return !current.IsEmpty(); }
@@ -91,7 +90,7 @@ namespace Volkov_HW_13
         {
             get
             {
-                if (select == null) select = new Command(execute => Select(), can => CanSelect());
+                if (select == null) select = new Commands(execute => Select(), can => CanSelect());
                 return select;
             }
         }
@@ -105,7 +104,7 @@ namespace Volkov_HW_13
         {
             get
             {
-                if (clear == null) clear = new Command(execute => Clear(), can => CanClear());
+                if (clear == null) clear = new Commands(execute => Clear(), can => CanClear());
                 return clear;
             }
         }
@@ -115,7 +114,7 @@ namespace Volkov_HW_13
         {
             get
             {
-                if (remove == null) remove = new Command(execute => Remove(), can => CanRemove());
+                if (remove == null) remove = new Commands(execute => Remove(), can => CanRemove());
                 return remove;
             }
         }
@@ -130,33 +129,33 @@ namespace Volkov_HW_13
             }
         }
         private bool CanRemove() { return ComboPersons.Count > 0; }
-        //public ICommand SaveCommand
-        //{
-        //    get
-        //    {
-        //        if (save == null) save = new Commands(execute => SaveToFile(), can => CanSave());
-        //        return save;
-        //    }
-        //}
-        //private void SaveToFile()
-        //{
-        //    try
-        //    {
-        //        string json = JsonConvert.SerializeObject(temp_list, Formatting.Indented);
-        //        File.WriteAllText("template.json", json);
-        //        json = JsonConvert.SerializeObject(ComboPersons, Formatting.Indented);
-        //        File.WriteAllText("combobox.json", json);
-        //    }
-        //    catch (Exception ex) { MessageBox.Show("Ошибка сохранения в файл: " + ex.Message); }
-        //    MessageBox.Show("Пользователи сохранены в файл.");
-        //}
-        //private bool CanSave() { return temp_list.Count > 0; }
+        public ICommand SaveCommand
+        {
+            get
+            {
+                if (save == null) save = new Commands(execute => SaveToFile(), can => CanSave());
+                return save;
+            }
+        }
+        private void SaveToFile()
+        {
+            try
+            {
+                string json = JsonConvert.SerializeObject(temp_list, Formatting.Indented);
+                File.WriteAllText("template.json", json);
+                json = JsonConvert.SerializeObject(ComboPersons, Formatting.Indented);
+                File.WriteAllText("combobox.json", json);
+            }
+            catch (Exception ex) { MessageBox.Show("Ошибка сохранения в файл: " + ex.Message); }
+            MessageBox.Show("Пользователи сохранены в файл.");
+        }
+        private bool CanSave() { return temp_list.Count > 0; }
     }
     public class PersonViewModel : BaseViewModel
     {
-        private Resume model;
+        private ResumeModel model;
         private bool check1, check2, check3;
-        public PersonViewModel() => model = new Resume();
+        public PersonViewModel() => model = new ResumeModel();
         public bool Check1
         {
             get { return check1; }
@@ -184,7 +183,7 @@ namespace Volkov_HW_13
                 OnPropertyChanged(nameof(Check3));
             }
         }
-        public Resume Model
+        public ResumeModel Model
         {
             get { return model; }
             set
@@ -193,13 +192,13 @@ namespace Volkov_HW_13
                 OnPropertyChanged(nameof(Model));
             }
         }
-        public string Fio
+        public string Fullname
         {
-            get { return model.Fio; }
+            get { return model.Fullname; }
             set
             {
-                model.Fio = value;
-                OnPropertyChanged(nameof(Fio));
+                model.Fullname = value;
+                OnPropertyChanged(nameof(Fullname));
             }
         }
         public string Age
@@ -211,13 +210,13 @@ namespace Volkov_HW_13
                 OnPropertyChanged(nameof(Age));
             }
         }
-        public string FamilyStatus
+        public string Family
         {
-            get { return model.FamilyStatus; }
+            get { return model.Family; }
             set
             {
-                model.FamilyStatus = value;
-                OnPropertyChanged(nameof(FamilyStatus));
+                model.Family = value;
+                OnPropertyChanged(nameof(Family));
             }
         }
         public string Address
@@ -238,14 +237,14 @@ namespace Volkov_HW_13
                 OnPropertyChanged(nameof(Email));
             }
         }
-        public string IsInfo
+        public string IsCPlusPlus
         {
-            get { return model.IsInfo; }
+            get { return model.IsCPlusPlus; }
             set
             {
-                if (Check1) model.IsInfo = "Да";
-                else model.IsInfo = "Нет";
-                OnPropertyChanged(nameof(IsInfo));
+                if (Check1) model.IsCPlusPlus = "Да";
+                else model.IsCPlusPlus = "Нет";
+                OnPropertyChanged(nameof(IsCPlusPlus));
             }
         }
         public string IsLanguage
@@ -258,34 +257,34 @@ namespace Volkov_HW_13
                 OnPropertyChanged(nameof(IsLanguage));
             }
         }
-        public string IsCommunicate
+        public string IsOOP
         {
-            get { return model.IsCommunicate; }
+            get { return model.IsOOP; }
             set
             {
-                if (Check3) model.IsCommunicate = "Да";
-                else model.IsCommunicate = "Нет";
-                OnPropertyChanged(nameof(IsCommunicate));
+                if (Check3) model.IsOOP = "Да";
+                else model.IsOOP = "Нет";
+                OnPropertyChanged(nameof(IsOOP));
             }
         }
         public PersonViewModel Clone()
         {
             return new PersonViewModel
             {
-                Fio = Fio,
+                Fullname = Fullname,
                 Age = Age,
-                FamilyStatus = FamilyStatus,
+                Family = Family,
                 Address = Address,
                 Email = Email,
-                IsInfo = IsInfo,
+                IsCPlusPlus = IsCPlusPlus,
                 IsLanguage = IsLanguage,
-                IsCommunicate = IsCommunicate
+                IsOOP = IsOOP
             };
         }
-        public string ComboText() { return Fio + ", " + Age; }
+        public string ComboText() { return Fullname + ", " + Age; }
         public bool IsEmpty()
         {
-            return (string.IsNullOrEmpty(Fio) || string.IsNullOrEmpty(Age) || string.IsNullOrEmpty(FamilyStatus)
+            return (string.IsNullOrEmpty(Fullname) || string.IsNullOrEmpty(Age) || string.IsNullOrEmpty(Family)
                 || string.IsNullOrEmpty(Address) || string.IsNullOrEmpty(Email));
         }
     }
