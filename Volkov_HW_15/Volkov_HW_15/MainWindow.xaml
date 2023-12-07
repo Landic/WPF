@@ -93,10 +93,10 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Margin="3,7,3,7" Command="{Binding FirstImageCommand}" Content="В начало" Template="{StaticResource ButtTemplate}"/>
-            <Button Margin="3,7,3,7" Command="{Binding PreviousImageCommand}" Content="Предыдущая" Grid.Column="1" Template="{StaticResource ButtTemplate}"/>
-            <Button Margin="3,7,3,7" Command="{Binding NextImageCommand}" Content="Следующая" Grid.Column="2" Template="{StaticResource ButtTemplate}"/>
-            <Button Margin="3,7,3,7" Command="{Binding LastImageCommand}" Content="В конец" Grid.Column="3" Template="{StaticResource ButtTemplate}"/>
+            <Button Margin="2" Command="{Binding FirstImageCommand}" Content="В начало" Template="{StaticResource ButtTemplate}"/>
+            <Button Margin="2" Command="{Binding PreviousImageCommand}" Content="Предыдущая" Grid.Column="1" Template="{StaticResource ButtTemplate}"/>
+            <Button Margin="2" Command="{Binding NextImageCommand}" Content="Следующая" Grid.Column="2" Template="{StaticResource ButtTemplate}"/>
+            <Button Margin="2" Command="{Binding LastImageCommand}" Content="В конец" Grid.Column="3" Template="{StaticResource ButtTemplate}"/>
         </Grid>
     </Grid>
 </Window>
