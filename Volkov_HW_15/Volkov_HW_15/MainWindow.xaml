@@ -1,0 +1,103 @@
+﻿<Window x:Class="Volkov_HW_15.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Volkov_HW_15"
+        mc:Ignorable="d"
+        Title="Gallery" Height="450" Width="900" MinHeight="450" MinWidth="900" Background="DimGray" Icon="galleryIco.png">
+    <Window.Resources>
+        <local:GalleryViewModel x:Key="galleryviewmodel"/>
+        <ControlTemplate x:Key="ButtTemplate" TargetType="{x:Type Button}">
+            <Border TextBlock.Foreground="White" CornerRadius="5" Background="DarkGray" Name="Border" Margin="5">
+                <Grid>
+                    <Rectangle Visibility="Hidden" Stroke="Black" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    <ContentPresenter RecognizesAccessKey="True" Margin="{TemplateBinding Padding}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="Border" Property="Background" Value="Gray"></Setter>
+                </Trigger>
+                <Trigger Property="IsEnabled"  Value="False">
+                    <Setter TargetName="Border" Property="Background" Value="Gray"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+
+    </Window.Resources>
+    <Grid DataContext="{StaticResource galleryviewmodel}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0.12*"/>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="DarkGray" BorderThickness="1" CornerRadius="7">
+            <Image Source="{Binding Current_Image.PathToPhoto}" Stretch="UniformToFill"/>
+        </Border>
+        <Slider Maximum="{Binding MaxImages}"  Value="{Binding Position, Mode=TwoWay}" Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center"/>
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="0.45*"/>
+            </Grid.RowDefinitions>
+            <Border BorderBrush="DarkGray" BorderThickness="2" CornerRadius="5" Margin="0 10 10 0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.9*"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.65*"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label HorizontalAlignment="Center" Content="Об изображении:" Foreground="White" Grid.ColumnSpan="2"/>
+                    <Label FontSize="12" Content="Название:" Grid.Row="1" Foreground="White"/>
+                    <Label FontSize="12" Content="Дата:" Grid.Row="2" Foreground="White"/>
+                    <Label FontSize="12" Content="Автор:" Grid.Row="3" Foreground="White" />
+                    <Label FontSize="12" Content="{Binding Current_Image.Name}" Grid.Row="1" Grid.Column="1" Foreground="White"/>
+                    <Label FontSize="12" Content="{Binding Current_Image.Date}" Grid.Row="2" Grid.Column="1" Foreground="White"/>
+                    <Label FontSize="12" Content="{Binding Current_Image.Author}" Grid.Row="3" Grid.Column="1" Foreground="White"/>
+                </Grid>
+            </Border>
+            <Border BorderBrush="DarkGray" BorderThickness="2" CornerRadius="5" Grid.Row="1" Margin="0 10 10 0">
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1.1*"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label HorizontalAlignment="Center" Content="Оценка:" Foreground="White"/>
+                    <RadioButton Content="5" Grid.Row="1" Foreground="White" HorizontalAlignment="Center"/>
+                    <RadioButton Content="4" Grid.Row="2" Foreground="White" HorizontalAlignment="Center"/>
+                    <RadioButton Content="3" Grid.Row="3" Foreground="White" HorizontalAlignment="Center"/>
+                    <RadioButton Content="2" Grid.Row="4" Foreground="White" HorizontalAlignment="Center"/>
+                    <RadioButton Content="1" Grid.Row="5" Foreground="White" HorizontalAlignment="Center"/>
+                </Grid>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="1" Grid.ColumnSpan="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Margin="3,7,3,7" Command="{Binding FirstImageCommand}" Content="В начало" Template="{StaticResource ButtTemplate}"/>
+            <Button Margin="3,7,3,7" Command="{Binding PreviousImageCommand}" Content="Предыдущая" Grid.Column="1" Template="{StaticResource ButtTemplate}"/>
+            <Button Margin="3,7,3,7" Command="{Binding NextImageCommand}" Content="Следующая" Grid.Column="2" Template="{StaticResource ButtTemplate}"/>
+            <Button Margin="3,7,3,7" Command="{Binding LastImageCommand}" Content="В конец" Grid.Column="3" Template="{StaticResource ButtTemplate}"/>
+        </Grid>
+    </Grid>
+</Window>

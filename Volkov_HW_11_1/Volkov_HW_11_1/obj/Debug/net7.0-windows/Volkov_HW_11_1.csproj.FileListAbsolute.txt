@@ -22,3 +22,4 @@ D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\obj\Debug\net7.0-windows\ref\Volko
 D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
 D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\obj\Debug\net7.0-windows\Volkov_HW_11_1.csproj.AssemblyReference.cache
 D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\obj\Debug\net7.0-windows\Volkov_HW_11_1.csproj.CopyComplete
+D:\Projects\WPF\Volkov_HW_11_1\Volkov_HW_11_1\obj\Debug\net7.0-windows\Volkov_HW_11_1.sourcelink.json

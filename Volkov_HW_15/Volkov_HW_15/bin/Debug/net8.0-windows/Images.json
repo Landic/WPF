@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Sukuna",
+    "Date": "2023-12-07",
+    "Author": "Николай Петрович",
+    "Path": "../../images/Sukuna1.jpg"
+  },
+  {
+    "Name": "Sukuna",
+    "Date": "2022-12-07",
+    "Author": "Петя Васильев",
+    "Path": "../../images/Sukuna2.jpg"
+  },
+  {
+    "Name": "Japan Samurai",
+    "Date": "2018-01-07",
+    "Author": "Ivan Ivanov",
+    "Path": "../../images/Japan1.jpg"
+  },
+  {
+    "Name": "Japan",
+    "Date": "2021-05-02",
+    "Author": "Mark Vilson",
+    "Path": "../../images/Japan2.jpg"
+  }
+]
